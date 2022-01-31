@@ -4,7 +4,7 @@ background-image: url(/static/gang.jpg);
 color:#fff;
 }
 body *{
-    font-family:Courier New
+    font-family:Courier New;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight:normal;
