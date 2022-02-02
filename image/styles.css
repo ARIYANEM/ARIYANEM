@@ -1,6 +1,6 @@
 body {
 background-color: #A020F0;
-background-image: url(/static/gang.jpg);
+background-image: url(/static/top.jpg);
 color:#fff;
 }
 body *{
@@ -9,4 +9,8 @@ body *{
 h1,h2,h3,h4,h5,h6{
     font-weight:normal;
     margin:0;
+}
+a,a:hover,a:visited{
+  color:#25fd06;
+  text-decoration:none;
 }
