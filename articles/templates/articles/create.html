@@ -2,5 +2,11 @@
  {% block content %}
  <div class="create">
   <h1>Create Your Post</h1>
+  <form class="site-form" action="{% url 'articles:create'%}" method="post">
+    {{form}}
+    {% csrf_token %}
+    <input type="submit" name="" value="create"/>
+
+  </form>
  </div>
  {% endblock %}
