@@ -14,12 +14,24 @@
     <h2><a href="{% url 'articles:list' %}">LOGO</a></h2>
     <nav>
       <ul>
+        {% if user.is_authenticated %}
         <li>
           <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
             {% csrf_token %}
-            <button type="submit">Logout</button>
+            <button type="submit">LOGOUT</button>
           </form>
         </li>
+        <li>
+          <a href="{% url 'articles:create' %}"> CREATE NEW ARTICLES </a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{% url 'accounts:login' %}">LOGIN</a>
+        </li>
+        <li>
+          <a href="{% url 'accounts:signup' %}">SIGNUP</a>
+        </li>
+        {% endif %}
       </ul>
     </nav>
     <div class="wrapper">
