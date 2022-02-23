@@ -4,12 +4,13 @@
 {%block title%}
 wellcom to Article
 {%endblock%}
-<div class="">
     <h1>Article_list</h1>
     {% for article in articles %}
+    <div class="article">
     <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
     <p>{{article.pangah_ta_gelo_boro}}</p>
     <p>{{article.date}}</p>
+    <p class="author">add by {{article.author.username}}</p>
+    </div>
     {% endfor %}
-</div>
 {%endblock%}

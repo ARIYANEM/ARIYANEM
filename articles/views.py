@@ -10,8 +10,8 @@ def articles_list(request):
     return render(request, 'articles/articleslist.html', collect)
 def detail(request, slug):
     #return HttpResponse(slug)
-    Link = models.Article.objects.get(slug=slug)
-    return render(request, 'articles/articles_detail.html',{'Linker':Link})
+    article = models.Article.objects.get(slug=slug)
+    return render(request, 'articles/articles_detail.html',{'article':article})
 
 @login_required(login_url = "/accounts/login")
 def articles_create(request):

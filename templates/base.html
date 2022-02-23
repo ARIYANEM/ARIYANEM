@@ -11,6 +11,7 @@
     <link rel='stylesheet' href="/static/styles.css">
   </head>
   <body>
+    <header>
     <h2><a href="{% url 'articles:list' %}">LOGO</a></h2>
     <nav>
       <ul>
@@ -34,6 +35,7 @@
         {% endif %}
       </ul>
     </nav>
+    </header>
     <div class="wrapper">
 {%block content%}
 {%endblock%}
