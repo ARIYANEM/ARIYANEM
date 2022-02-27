@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Article(models.Model):
     title = models.CharField(max_length = 100)
-    slug = models.SlugField()
+    slug = models.SlugField(unique = True,allow_unicode = True)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
     image = models.ImageField(default='default.jpg',blank=True)
