@@ -57,7 +57,7 @@ ROOT_URLCONF = 'gaming_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+         'DIRS': [r'/home/dsfsdfsadfdsf/ARIYANEM/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
